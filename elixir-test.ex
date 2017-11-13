@@ -37,6 +37,19 @@ defmodule Geometry do
 
     def perimiter(a, b) do
       2|>Calc.prod(a)|>Calc.sum(2|>Calc.prod(b))
+    end
+  end
+
+  defmodule Square do:
+    def area(a) do
+      Calc.prod(a,a)
+    end
+
+    def perimiter(a, a) do
+      Calc.sum(a,a)
+    end
+  end
+
   defmodule Circle do
     @moduledoc "Implementation for circle application"
     @pi 3.14159
