@@ -23,24 +23,25 @@ defmodule Geometry do
   alias Calculator, as: Calc
 
   defmodule Rectangle do
-    def area(a) do
-      area({a,a})
-    end
 
     def area({a, b}) do
       Calc.prod(a,b)
     end
 
-    def perimiter(a) do
-      perimiter({a,a})
+    def area(a) do
+      area({a,a})
     end
 
     def perimiter({a, b}) do
       2|>Calc.prod(a)|>Calc.sum(2|>Calc.prod(b))
     end
+
+    def perimiter(a) do
+      perimiter({a,a})
+    end
   end
 
-  defmodule Square do:
+  defmodule Square do
     def area(a) do
       Calc.prod(a,a)
     end
