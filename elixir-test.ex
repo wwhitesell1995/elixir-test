@@ -24,18 +24,18 @@ defmodule Geometry do
 
   defmodule Rectangle do
     def area(a) do
-      area(a,a)
+      area({a,a})
     end
 
-    def area(a, b) do
+    def area({a, b}) do
       Calc.prod(a,b)
     end
 
     def perimiter(a) do
-      perimiter(a,a)
+      perimiter({a,a})
     end
 
-    def perimiter(a, b) do
+    def perimiter({a, b}) do
       2|>Calc.prod(a)|>Calc.sum(2|>Calc.prod(b))
     end
   end
@@ -46,7 +46,7 @@ defmodule Geometry do
     end
 
     def perimiter(a, a) do
-      Calc.sum(a,a)
+      Calc.prod(4,a)
     end
   end
 
