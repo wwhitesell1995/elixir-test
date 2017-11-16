@@ -74,11 +74,15 @@ defmodule Factorial do
      do_factorial(factorial_no,factorial_no-1)
    end
 
-   def do_factorial(factorial_no, 1) do
-     factorial_no
+   def do_factorial(factorial_no, curr_no) when factorial_no <= 1  do
+      factorial_no-curr_no
    end
 
-   def do_factorial(factorial_no, curr_no) do
+   def do_factorial(factorial_no, 1) do
+      factorial_no
+   end
+
+   def do_factorial(factorial_no, curr_no) when curr_no > 1 do
      factorial_no*curr_no|>do_factorial(curr_no-1)
    end
 end
