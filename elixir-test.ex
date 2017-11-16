@@ -68,3 +68,17 @@ defmodule Geometry do
     end
   end
 end
+
+defmodule Factorial do
+   def factorial(factorial_no) do
+     do_factorial(factorial_no,factorial_no-1)
+   end
+
+   def do_factorial(factorial_no, 1) do
+     factorial_no
+   end
+
+   def do_factorial(factorial_no, curr_no) do
+     factorial_no*curr_no|>do_factorial(curr_no-1)
+   end
+end
